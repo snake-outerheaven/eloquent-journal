@@ -30,12 +30,32 @@ O repositório está organizado por capítulos do livro, com cada exercício em 
 
 Para executar qualquer exercício no Node.js:
 
-```sh
+**No Windows**: 
+
+```powershell
+ node ch01\ch01-ex_looping-triangle.js 
+ ```
+
+**No Linux**: 
+
+```bash
 node ch01/ch01-ex1_looping-triangle.js
 ```
 
-Para exercícios que rodam no browser, basta abrir o arquivo HTML correspondente em um navegador baseado em Firefox.
-
+**No Browser:**
+Abra o arquivo HTML correspondente em qualquer navegador ou crie um arquivo HTML simples:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eloquent JS Exercise</title>
+</head>
+<body>
+    <script src="ch01/ch01-ex1_looping-triangle.js"></script>
+</body>
+</html>
+```
 ---
 
 ## 🎯 Objetivos
@@ -71,34 +91,12 @@ E o melhor: JavaScript está em constante evolução. Da simplicidade do `consol
 
 ### Targets
 - **Node.js** - para scripts e aplicações server-side
-- **Navegadores baseados em Firefox** - para código client-side
+- **Navegadores baseados em Chromium** - para código client-side
 
 ### Ferramentas
-- JavaScript puro (ES6+) sem frameworks inicialmente
-- Editor de texto de sua preferência
+- JavaScript puro (ES6+), sem frameworks inicialmente
+- Visual Studio Code
 - Console do navegador para debugging
-
-### Como Executar
-
-**No Node.js:**
-```sh
-node ch01/ch01-ex1_looping-triangle.js
-```
-
-**No Browser:**
-Abra o arquivo HTML correspondente no Firefox ou crie um arquivo HTML simples:
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Eloquent JS Exercise</title>
-</head>
-<body>
-    <script src="ch01/ch01-ex1_looping-triangle.js"></script>
-</body>
-</html>
-```
 
 ---
 
