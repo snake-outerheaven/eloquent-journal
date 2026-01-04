@@ -1,0 +1,3 @@
+This directory will reside any examples ch01 have
+
+can be erased if there is none.
