@@ -50,5 +50,7 @@ for (let i = 1; i < 101; i++) {
         1º -> Analyzing the overlap condition first was key on doing this exercise, but unfortunately i missed the entire point of this, 
                 i must study more about logic and math. 
 
-        
+        2º -> this exercise shows two patterns of solving the same issue: overlap  reasoning, where you attack the specific overlaps before delving to the
+                general cases, and the accumulator pattern, where input already implies a output exist, so you just need to reason about it and accumulate 
+                wanted outputs to a void already existant output, much like a assembly line.
 */

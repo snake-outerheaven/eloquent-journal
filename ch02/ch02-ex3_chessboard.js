@@ -66,3 +66,5 @@ console.log(board);
 
 
 // note to myself: revisit this exercise and redo it later, the core of this exercise is very straight, if rols + cols is even, print " ", if its not, print "#"
+
+// this exercise also was difficult because i needed to use the accumulator pattern since the other pattern just makes it unsolvable.

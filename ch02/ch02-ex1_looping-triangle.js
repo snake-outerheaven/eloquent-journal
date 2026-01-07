@@ -16,6 +16,8 @@ for (let i = 0; i < 7; i++) {
         holder += '#';
 }
 
+console.log('');
+
 // a more elegant solution is shown in the hints of this exercise, i will reproduce it
 
 for (let hold = '#'; hold.length <= 7; hold += '#')
