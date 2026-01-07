@@ -15,47 +15,20 @@ When you have a program that generates this pattern, define a binding size = 8 a
 
 */
 
-const string1 = " ########\n"
-const string2 = "######## \n"
-let outpstring = "";
+let size = 8;
+let p1 = ' ';
+let p2 = '#';
+let chessboard = '';
 
-for (let i = 1; i < 9; i++) {
-        if (!(i % 2)) // if i % 2 is 0, so its false. (Bethesda logic.)
-                outpstring += string2;
-        else
-                outpstring += string1
-}
-
-console.log(outpstring);
-
-console.log('');
-
-// just reduced more the abstraction level, it works but its a bit strange, i should just go for a entire flattened string, while deducting higher dimension
-// stuff from a index, but instead i used both 2d and 1d strategies at the same time, which made this odd but yet functional code.
-
-let size = 19;
-let line = "";
-const piece1 = " #";
-const piece2 = '#';
-const piece3 = '# ';
-
-
-for (let y = 0; y < size; y++) {
-        for (let x = 0; x < size; x++) {
-                if (!(y % 2) && x == 0) {
-                        line += piece1;
-                } else if (!(y % 2) && !(x == 0))
-                        line += piece2;
-                if ((y % 2) && x == 0)
-                        line += piece2;
-                else if ((y % 2) && !(x == 0))
-                        line += piece2;
-                else if ((y % 2) && x == size - 1)
-                        line += piece3;
+for (let row = 0; row < size; row++) {
+        for (let col = 0; col < size; col++) {
+                chessboard += !((row + col) % 2) ? p1 : p2;
+                if (col == size - 1)
+                        chessboard += '\n';
         }
-        line += '\n';
 }
-console.log(line);
+console.log(chessboard);
+
 
 
 // the book's hint exposes a way more clean and clever way to solve this exercise,  i will try to translate it to javascript below
@@ -72,7 +45,9 @@ for (let row = 0; row < Size; row++) {
         Line += '\n';
 }
 
-// Copilot shows a way on how to handling this using just a 1d array and actually looks more like a chessboard.
+console.log(Line);
+
+// Copilot shows a way on how to handling this using just a 1d array
 
 let size2 = 45;
 let board = "";
