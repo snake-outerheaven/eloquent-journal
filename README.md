@@ -132,8 +132,3 @@ Provided that derivative works remain under the same license and include source 
 Made with focus, discipline, and deliberate practice — snake-outerheaven
 
 ---
-
-## Conclusion
-
-This README reflects a deliberate, study-centered approach to learning JavaScript through *Eloquent JavaScript*. The structure avoids unnecessary introductory examples and prioritizes clarity, maintainability, and long-term learning value.
-
