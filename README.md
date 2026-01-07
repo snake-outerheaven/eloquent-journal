@@ -2,154 +2,138 @@
 
 # 🌐 Eloquent Journal
 
-Bem-vindo ao **Eloquent Journal**, um repositório dedicado à documentação dos meus estudos com **JavaScript** através do livro [Eloquent JavaScript](https://eloquentjavascript.net/) — e aberto à comunidade!
-
-Aqui você encontrará resoluções de exercícios, projetos práticos e anotações sobre a linguagem que move a web, organizado de forma clara para facilitar o acompanhamento do aprendizado.
+Welcome to **Eloquent Journal**, a repository dedicated to documenting my JavaScript studies using *Eloquent JavaScript* (Marijn Haverbeke). This repository contains solved exercises, practical projects, and notes about the language and its concepts — organized for clarity and reuse.
 
 ---
 
-## 📁 Estrutura do Repositório
+## 📁 Repository structure
 
-O repositório está organizado por capítulos do livro, com cada exercício em seu próprio arquivo. Projetos maiores ficam em um diretório separado para maior clareza.
+The repository is organized by book chapters and projects. Each exercise or relevant file lives in its own file to keep the repository navigable.
 
-```
-.
-├── ch01/
-│   ├── ch01-ex1_looping-triangle.js
-│   ├── ch01-ex2_fizzbuzz.js
-│   └── ch01-ex3_chessboard.js
-├── ch02/
-│   ├── ch02-ex1_minimum.js
-│   └── ch02-ex2_recursion.js
+```text
+├── chapters/
+│   ├── ch02/
+│   │   ├── ch02-ex1_minimum.js
+│   │   └── ch02-ex2_recursion.js
 ├── projects/
 │   ├── todo-list/
 │   ├── simple-game/
 │   └── api-client/
 └── README.md
 ```
+---
 
-Para executar qualquer exercício no Node.js:
+## ▶️ How to run the code
 
-**No Windows**: 
+You can run the exercise files or small scripts with Node.js. Replace `path/to/script.js` with the actual file path.
 
+On Windows (PowerShell):
 ```powershell
- node ch01\ch01-ex_looping-triangle.js 
- ```
-
-**No Linux**: 
-
-```bash
-node ch01/ch01-ex1_looping-triangle.js
+node path\to\script.js
 ```
-
-**No Browser:**
-Abra o arquivo HTML correspondente em qualquer navegador ou crie um arquivo HTML simples:
+On Linux / macOS (bash):
+```bash
+node path/to/script.js
+```
+In the browser:
+Create a simple HTML file and include the script:
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Eloquent JS Exercise</title>
+  <meta charset="utf-8" />
+  <title>Eloquent JS Exercise</title>
 </head>
 <body>
-    <script src="ch01/ch01-ex1_looping-triangle.js"></script>
+  <script src="path/to/script.js"></script>
 </body>
 </html>
 ```
 ---
 
-## 🎯 Objetivos
+## 🎯 Objectives
 
-- Documentar minha jornada através do Eloquent JavaScript
-- Resolver todos os exercícios do livro com código comentado
-- Desenvolver projetos práticos aplicando os conceitos aprendidos
-- Compartilhar soluções e insights com a comunidade
-- Criar uma base sólida de conhecimento em JavaScript moderno
-
----
-
-## 🌍 Por que JavaScript?
-
-JavaScript é a linguagem da web — e a web é muito mais do que tecnologia.
-
-Se a web não fosse tão boa em transportar emoções facilmente, ela não existiria. Ela faz parte do subconsciente coletivo da humanidade, é como se fosse um retrato no mundo real dele. Cada site, cada aplicação, cada interação é uma extensão da criatividade e conexão humana.
-
-JavaScript é a linguagem que dá vida a isso tudo. É com ela que:
-
-- Criamos experiências interativas que conectam pessoas ao redor do mundo
-- Transformamos ideias abstratas em interfaces tangíveis e responsivas
-- Construímos ferramentas que democratizam o acesso à informação e ao conhecimento
-- Expressamos criatividade através de animações, jogos, visualizações de dados
-
-E o melhor: JavaScript está em constante evolução. Da simplicidade do `console.log()` à complexidade de frameworks modernos, ela se adapta e cresce com as necessidades da web.
-
-**Eloquent JavaScript**, em particular, é uma obra-prima de didática. Marijn Haverbeke conseguiu criar um livro que não apenas ensina a sintaxe, mas cultiva o pensamento computacional de forma elegante e progressiva. Cada capítulo é uma nova camada de compreensão, cada exercício um desafio instigante.
+- Document my study progress through *Eloquent JavaScript*
+- Solve the book exercises with well-commented code
+- Build practical projects that apply the learned concepts
+- Share solutions and insights with the community
+- Establish a solid base of knowledge in modern JavaScript
 
 ---
 
-## 🛠️ Ambiente de Desenvolvimento
+## 🌍 Why JavaScript?
 
-### Targets
-- **Node.js** - para scripts e aplicações server-side
-- **Navegadores baseados em Chromium** - para código client-side
+JavaScript is the language of the web and serves as a bridge between ideas and interactive experiences. It enables:
 
-### Ferramentas
-- JavaScript puro (ES6+), sem frameworks inicialmente
+- The creation of interactive interfaces and applications available globally
+- Rapid prototyping and experimentation across client and server environments
+- A broad ecosystem for building tools, visualizations, and games
+- Continuous evolution that keeps the language relevant for both frontend and backend development
+
+*Eloquent JavaScript* stands out because it emphasizes computational thinking, not just syntax. It teaches how to reason about problems, abstractions, and systems.
+
+---
+
+## 🛠️ Development environment
+
+Targets:
+- Node.js for scripting and server-side experiments
+- Chromium-based browsers for client-side testing
+
+Tools:
+- Plain JavaScript (ES6+)
 - Visual Studio Code
-- Console do navegador para debugging
+- Browser console and Node REPL for debugging
 
 ---
 
-## 📚 Recursos Úteis
+## 📚 Useful resources
 
-- [Eloquent JavaScript (Online - Grátis)](https://eloquentjavascript.net/)
-- [MDN Web Docs - JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [JavaScript.info - Tutorial Moderno](https://javascript.info/)
-- [Node.js Documentation](https://nodejs.org/docs/)
-- [Can I Use - Compatibilidade de Features](https://caniuse.com/)
-
----
-
-## 📖 Sobre o Livro
-
-**Eloquent JavaScript** de Marijn Haverbeke é considerado um dos melhores livros para aprender JavaScript de forma profunda e consciente. Ele cobre desde os fundamentos da linguagem até conceitos avançados como programação assíncrona, manipulação do DOM e desenvolvimento de projetos completos.
-
-O livro está disponível gratuitamente online e é constantemente atualizado para refletir as mudanças no ecossistema JavaScript.
+- Eloquent JavaScript (Online): https://eloquentjavascript.net/
+- MDN Web Docs — JavaScript: https://developer.mozilla.org/
+- JavaScript.info — Modern tutorial: https://javascript.info/
+- Node.js Documentation: https://nodejs.org/en/docs/
+- Can I Use — Feature compatibility: https://caniuse.com/
 
 ---
 
-## 🤝 Contribuições
+## 🤝 Contributions
 
-Este é primariamente um repositório de estudo pessoal, mas sugestões, correções e discussões são sempre bem-vindas!
+This repository is primarily a personal study log, but constructive contributions are welcome:
 
-Sinta-se à vontade para:
-- Abrir [issues](https://github.com/snake-outerheaven/eloquent-journal/issues) com dúvidas ou sugestões
-- Compartilhar abordagens alternativas para os exercícios
-- Sugerir melhorias na organização ou documentação
+- Open issues for questions, suggestions, or corrections
+- Propose alternative solutions for exercises
+- Suggest improvements for structure or documentation
 
----
-
-## 🌐 Contato
-
-Dúvidas, feedback ou só quer trocar uma ideia sobre JavaScript?
-
-Entre em contato pelo [GitHub](https://github.com/snake-outerheaven).
+Please keep discussions focused and respect the project license.
 
 ---
 
-## 📄 Licença
+## 🌐 Contact
 
-Este projeto está licenciado sob a [GNU General Public License v3.0](LICENSE).
-
-Isso significa que você é livre para:
-- ✅ Usar o código para qualquer propósito
-- ✅ Estudar e modificar o código
-- ✅ Compartilhar o código
-- ✅ Compartilhar suas modificações
-
-**Desde que** mantenha o mesmo licenciamento e compartilhe o código fonte de suas modificações.
+For questions, feedback, or discussions about JavaScript and learning approaches, visit:
+https://github.com/snake-outerheaven
 
 ---
 
-Feito com paixão, café e muito JavaScript!  
-**snake-outerheaven**
+## 📄 License
+
+This project is licensed under the GNU General Public License v3.0 (GPLv3).
+
+You are free to:
+- Use the code for any purpose
+- Study and modify the code
+- Share the original code and your modifications
+
+Provided that derivative works remain under the same license and include source code.
+
+---
+
+Made with focus, discipline, and deliberate practice — snake-outerheaven
+
+---
+
+## Conclusion
+
+This README reflects a deliberate, study-centered approach to learning JavaScript through *Eloquent JavaScript*. The structure avoids unnecessary introductory examples and prioritizes clarity, maintainability, and long-term learning value.
+
