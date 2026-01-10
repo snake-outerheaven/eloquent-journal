@@ -23,18 +23,22 @@
 
 // TODO:  As a bonus assignment, modify your range function to take an optional third argument that indicates the “step” value used when building the array. 
 
-const range = (start, end) => {
+const range = (start, end, step) => {
         let returnArray = [];
         start = Number(start);
         end = Number(end);
 
         if (end - start > 0) {
-                for (let i = start; i <= end; i++)
+                if (step == undefined)
+                        step = 1;
+                for (let i = start; i <= end; i += step)
                         returnArray.push(i);
                 return returnArray;
         }
         if (end - start < 0) {
-                for (let i = start; i >= end; i--)
+                if (step == undefined)
+                        step = 1;
+                for (let i = start; i >= end; i -= step)
                         returnArray.push(i)
                 return returnArray;
         }
@@ -57,7 +61,7 @@ const sum = array => {
         return sum;
 };
 
-let range1 = range(1, 10), range2 = range(-1, -10);
+let range1 = range(1, 10,2), range2 = range(-1, -10,2);
 
 console.table(range1);
 console.table(range2);
