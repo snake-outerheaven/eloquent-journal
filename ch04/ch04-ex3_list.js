@@ -41,9 +41,6 @@ const Node = number => {
         return { value: number, rest: null };
 };
 
-console.log(Node(123));
-// {value: 123, rest: null}
-
 const arrayToList = array => {
 
         if (array.length === 0)
@@ -60,15 +57,20 @@ const arrayToList = array => {
         return head;
 }
 
-let x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-let y = [];
-console.log(arrayToList(x));
-console.log(arrayToList(y));
-
 const prepend = (number, list) => {
         let newHead = Node(number);
         newHead.rest = list;
         return newHead;
+};
+
+const append = (number, list) => {
+        let newTail = Node(number);
+        let current = list;
+
+        while (current.rest != null)
+                current = current.rest;
+
+        current.rest = newTail;
 };
 
 const nth = (n, list) => {
@@ -91,12 +93,3 @@ const recursiveNth = (n, list) => {
                 return list.value;
         return recursiveNth(n - 1, list.rest);
 };
-
-let xList = arrayToList(x);
-console.dir(xList);
-xList = prepend("This is a linked list.", xList);
-console.dir(xList);
-let xListString = JSON.stringify(xList);
-console.log(xListString);
-console.log(nth(3, xList));
-console.log(recursiveNth(4, xList));
