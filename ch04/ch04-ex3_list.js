@@ -57,6 +57,18 @@ const arrayToList = array => {
         return head;
 }
 
+const listToArray = list => {
+        let array = [];
+        let current = list;
+
+        while (current != null) {
+                array.push(current.value)
+                current = current.rest;
+        }
+
+        return array;
+};
+
 const prepend = (number, list) => {
         let newHead = Node(number);
         newHead.rest = list;
@@ -92,4 +104,14 @@ const recursiveNth = (n, list) => {
         if (n === 0)
                 return list.value;
         return recursiveNth(n - 1, list.rest);
+};
+
+const freeList = list => {
+        let current = list;
+
+        while (current != null) {
+                let temp = current.rest;
+                current.rest = null;
+                current = temp;
+        }
 };
