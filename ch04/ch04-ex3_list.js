@@ -31,13 +31,15 @@
         Add the helper functions prepend, which takes an element and a list and creates a new list that adds the element to the front of the input list, 
         
         and nth, which takes a list and a number and returns the element at the given position in the list (with zero referring to the first element)  or undefined when there is no such element.
+
+        If you haven’t already, also write a recursive version of nth.
+
 */
 
 // Node constructor.
 const Node = number => {
         return { value: number, rest: null };
 };
-
 
 console.log(Node(123));
 // {value: 123, rest: null}
@@ -63,16 +65,38 @@ let y = [];
 console.log(arrayToList(x));
 console.log(arrayToList(y));
 
-const prepend = (number, list) => { 
+const prepend = (number, list) => {
         let newHead = Node(number);
         newHead.rest = list;
         return newHead;
 };
 
+const nth = (n, list) => {
+        let index = 0;
+        let current = list;
+
+        while (current !== null) {
+                if (n === index)
+                        return current.value;
+                current = current.rest;
+                index++
+        }
+        return undefined;
+};
+
+const recursiveNth = (n, list) => {
+        if (list === null)
+                return undefined;
+        if (n === 0)
+                return list.value;
+        return recursiveNth(n - 1, list.rest);
+};
+
 let xList = arrayToList(x);
 console.dir(xList);
-xList = prepend(-1,xList);
+xList = prepend("This is a linked list.", xList);
 console.dir(xList);
-
-// TODO: Create nth function that takes a list and a  number,  create a index with 0,  create a current binding to the list. and do the recursive loop ( while (current !== null) ) until current.value == n. 
-// and then return current.value.
+let xListString = JSON.stringify(xList);
+console.log(xListString);
+console.log(nth(3, xList));
+console.log(recursiveNth(4, xList));
