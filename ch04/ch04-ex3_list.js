@@ -76,9 +76,12 @@ const prepend = (number, list) => {
 };
 
 const pop = list => {
-    let value = list.value;
-    list = list.rest;
-    return value;
+        if (!list)
+                return null;
+        let value = list.value;
+        list.value = list.rest.value;
+        list.rest = list.rest.rest;
+        return value;
 };
 
 const append = (number, list) => {
