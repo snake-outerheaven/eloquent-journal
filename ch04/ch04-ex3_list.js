@@ -75,6 +75,12 @@ const prepend = (number, list) => {
         return newHead;
 };
 
+const pop = list => {
+    let value = list.value;
+    list = list.rest;
+    return value;
+};
+
 const append = (number, list) => {
         let newTail = Node(number);
         let current = list;
