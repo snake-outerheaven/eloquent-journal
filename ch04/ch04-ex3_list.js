@@ -124,3 +124,11 @@ const freeList = list => {
                 current = temp;
         }
 };
+
+
+let list = arrayToList([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
+console.log(JSON.stringify(list));
+console.log(pop(list));
+console.log(JSON.stringify(list));
+list = prepend(0, list);
+console.log(JSON.stringify(list));
