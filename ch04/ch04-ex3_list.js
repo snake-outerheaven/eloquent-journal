@@ -75,12 +75,14 @@ const prepend = (number, list) => {
         return newHead;
 };
 
-const pop = list => {
-        if (!list)
+const pop = head => {
+        if (!head)
                 return null;
-        let value = list.value;
-        list.value = list.rest.value;
-        list.rest = list.rest.rest;
+        if (!head.rest)
+                return null;
+        let value = head.value;
+        head.value = head.rest.value;
+        head.rest = head.rest.rest;
         return value;
 };
 
