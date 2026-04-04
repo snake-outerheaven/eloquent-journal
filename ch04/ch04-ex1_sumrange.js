@@ -54,14 +54,13 @@ const sum = array => {
         if (array.length == 0)
                 return 0;
 
-        if (array.length > 0)
-                for (let i = 0; i < array.length; i++)
-                        sum += array[i];
+        for (let i = 0; i < array.length; i++)
+                sum += array[i];
 
         return sum;
 };
 
-let range1 = range(1, 10,2), range2 = range(-1, -10,2);
+let range1 = range(1, 10, 2), range2 = range(-1, -10, 2);
 
 console.table(range1);
 console.table(range2);
