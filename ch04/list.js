@@ -109,12 +109,12 @@ const nth = (n, list) => {
         return undefined;
 };
 
-const recursiveNth = (n, list) => {
+const recursiveNth = (step, list) => {
         if (list === null)
                 return undefined;
-        if (n === 0)
+        if (step === 0)
                 return list.value;
-        return recursiveNth(n - 1, list.rest);
+        return recursiveNth(step - 1, list.rest);
 };
 
 const freeList = list => {
@@ -126,11 +126,14 @@ const freeList = list => {
                 current = temp;
         }
 };
-
-
+/*
 let list = arrayToList([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
 console.log(JSON.stringify(list));
 console.log(pop(list));
 console.log(JSON.stringify(list));
 list = prepend(0, list);
 console.log(JSON.stringify(list));
+*/
+export {
+        arrayToList
+};
