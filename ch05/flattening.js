@@ -23,3 +23,4 @@ let snake = arrayProperties.reduce((obj, current) => { obj[current[0]] = current
 
 console.log(snake);
 
+// Mozzila's documentation for reduce is here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce <- please read this!!
