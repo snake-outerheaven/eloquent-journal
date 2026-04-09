@@ -34,7 +34,7 @@ const deepEqual = (obj1, obj2) => {
 
 };
 
-let list1 = arrayToList([1, 2, 3, 4, 5]);
+let list1 = arrayToList([1, 2, 3, 4, 5, 6]);
 let list2 = arrayToList([1, 2, 3, 4, 5]);
 
 console.table(JSON.stringify(list1));
