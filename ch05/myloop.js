@@ -22,10 +22,10 @@
 */
 
 
-function loop(value, test, update, body) {
+function myloop(value, test, update, body) {
         for (let current = value; test(current); current = update(current))
                 body(current);
 
 }
 
-loop(0, n => n < 10, n => n + 1, console.log);
+myloop(0, n => n < 10, n => n + 1, console.log);
