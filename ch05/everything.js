@@ -5,7 +5,6 @@ Write two versions:
 2. One using the `some` method
 */
 
-
 function every(arr, func) {
         for (let element of arr)
                 if (!func(element))

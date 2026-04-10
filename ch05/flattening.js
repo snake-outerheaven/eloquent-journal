@@ -10,7 +10,6 @@ let array = arrayOfArrays.reduce((accum, current) => { return accum.concat(curre
 
 console.table(array);
 
-
 let arrayNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
 let sum = arrayNums.reduce((sum, current) => { return sum + current }, 0);

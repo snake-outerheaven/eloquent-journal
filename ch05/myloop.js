@@ -21,7 +21,6 @@
     You may use a regular loop internally to implement this behavior.
 */
 
-
 function myloop(value, test, update, body) {
         for (let current = value; test(current); current = update(current))
                 body(current);
