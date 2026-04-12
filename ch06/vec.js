@@ -23,6 +23,28 @@ class Vec {
                 this.#y = y;
         }
 
+        get x() {
+                return this.#x;
+        }
+
+        set x(value) {
+                if (typeof value !== "number") {
+                        throw new TypeError("x must be a number");
+                }
+                this.#x = value;
+        }
+
+        get y() {
+                return this.#y;
+        }
+
+        set y(value) {
+                if (typeof value !== "number") {
+                        throw new TypeError("y must be a number");
+                }
+                this.#y = value;
+        }
+
         static isVec(obj) {
                 return obj instanceof Vec;
         }
@@ -45,3 +67,19 @@ class Vec {
                 return Math.sqrt(this.#x * this.#x + this.#y * this.#y);
         }
 }
+
+let vec1 = new Vec(12, 34);
+let vec2 = new Vec(643, 123);
+
+console.log(vec1.x, vec2.y);
+console.log(vec2.x, vec2.y);
+
+let vec3 = vec1.minus(vec2);
+let vec4 = vec2.plus(vec1);
+let vec5 = vec1.plus(vec2);
+let vec6 = vec2.minus(vec1);
+
+console.log(vec3.x, vec3.y);
+console.log(vec4.x, vec4.y);
+console.log(vec5.x, vec5.y);
+console.log(vec6.x, vec6.y);
