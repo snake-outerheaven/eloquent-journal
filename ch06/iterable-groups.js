@@ -47,23 +47,19 @@ class Group {
 	}
 
 	has(value) {
-
 		return this.group.includes(value);
 	}
 
 	add(value) {
-
 		if(!this.has(value))
 			this.group.push(value);
 	}
 
 	remove(value) {
-
 		this.group = this.group.filter(v => v !== value);
 	}
 
-	static from(collection) {
-
+	static from(iterable) {
 		let group = new Group();
 
 		for(let item of iterable)
@@ -71,5 +67,37 @@ class Group {
 
 		return group;
 	}
+
+    [Symbol.iterator]() {
+        return new GroupIterator(this);
+    }
 }
+
+class GroupIterator {
+
+    group;
+    index;
+
+
+    constructor(group) {
+        this.group = group;
+        this.index = 0;
+    }
+
+    next() {
+
+        if(this.index >= this.group.group.length)
+            return { done: true };
+
+        let result = this.group.group[this.index++];
+
+        return { value: result, done: false };
+    }
+}
+
+
+let group = Group.from([1, 2, 3, 4, 5, 6, 7, 8]);
+
+for(let element of group)
+    console.log(element);
 
